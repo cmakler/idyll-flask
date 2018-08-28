@@ -14,13 +14,20 @@ To run:
    ```
    pip install -r requirements.txt -t lib
    ```
-3. Run this project locally from the command line:
+   
+3. Set the flask environmental variable:
+
+   ```
+   export FLASK_APP=app.py
+   ```
+
+4. Run this project locally from the command line:
 
    ```
    flask run
    ```
 
-4. Visit the application [http://localhost:5000](http://localhost:5000)
+5. Visit the application [http://localhost:5000](http://localhost:5000)
 
 
 ## Importing idyll-embed
