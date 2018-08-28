@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Flask Idyll Templating Engine</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+	<p>The purpose of this is to provide a framework for a multi-page web site using Flask</p>
+	<p>Markdown is stored in .md files in a posts/ folder; URLs with the post name (no .md extension needed!) resolve there.
+	<ul>
+		<li><a href="{{ url_for('post', path='post1') }}">Post 1</a></li>
+		<li><a href="{{ url_for('post', path='post2') }}">Post 2</a></li>
+	</ul>
+</body>
+</html>

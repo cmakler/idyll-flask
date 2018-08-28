@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>My First Post</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!--This is the div where the markdown will be rendered. It is initially invisible. -->
+    <div id="md" style="display:none">{{ md }}</div>
+<script src="{{ url_for('static', filename='js/idyll-embed.min.js') }}"></script>
+<script>
+    // this script replaces markdown in the div with an id "md".
+    var div = document.getElementById("md");
+
+    // get the markdown from the innerHTML of that div.
+    var md = div.innerHTML;
+
+    // replace it with the idyll-ized HTML
+    Idyll.render(md, div);
+
+    // make visible after rendering (this prevents it from showing the un-rendered markdown on page load)
+    div.setAttribute("style","display:block");
+</script>
+
+</body>
+</html>
